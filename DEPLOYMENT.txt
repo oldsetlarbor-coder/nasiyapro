@@ -1,0 +1,9 @@
+Production checklist:
+1. Use managed PostgreSQL and private environment variables.
+2. Set NODE_ENV=production, APP_URL=https://your-domain, DATABASE_URL, JWT_SECRET.
+3. Configure PAYMENT_CARD_* values and TELEGRAM_BOT_TOKEN / WEBHOOK_SECRET.
+4. Deploy Node app to a host that supports persistent Node processes and cron.
+5. Run npm run db:init and node scripts/create-admin.js once.
+6. Configure Telegram webhook over HTTPS.
+7. Set up daily database backups, monitoring, HTTPS and security review.
+Do not expose .env or admin credentials.
